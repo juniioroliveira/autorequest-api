@@ -10,8 +10,12 @@ module.exports = {
         }
 
     },
-    Get: function(){
-        return ApiDoc;
+    Get: function(plataform){
+        
+        if(plataform)
+            return ApiDoc.get(plataform);
+        else
+            return ApiDoc
     }
 
 }

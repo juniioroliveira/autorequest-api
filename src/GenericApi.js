@@ -1,7 +1,7 @@
 
 const axios = require('axios');
-const { ApiDoc,  } = require('./Documentation');
-const { UsersApi } = require('./Users');
+const Doc = require('./Documentation');
+const Users = require('./Users');
 
 // Configuração do cache de autenticação
 let authCache = {};
@@ -92,14 +92,14 @@ async function GenericApi(apiName, apiRoute, data, headers, params, query) {
 
     try { 
         // Busca informações da API
-        const apiInfo = await ApiDoc.get(apiName); // getAPIInfo(apiName);
+        const apiInfo = await Doc.Get(apiName); // getAPIInfo(apiName);
         const route = apiInfo.endpoints[apiRoute - 1];
         let token;
 
         // Configuração do token de autenticação
         if (route.auth) {
             
-            const { credential, tokenField } = UsersApi.get(apiName);
+            const { credential, tokenField } = Users.Get(apiName);
             
             if (!authCache[apiName]) {
                 console.log(`Gerando token de acesso para ${route.url}`.cyan)

@@ -11,8 +11,11 @@ module.exports = {
 
     },
 
-    Get:  function() {
-        return UsersApi
+    Get:  function(plataform) {
+        if(plataform)
+            return UsersApi.get(plataform);
+        else
+            return UsersApi
     }
 
 } 
