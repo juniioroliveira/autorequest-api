@@ -1,5 +1,5 @@
 {
-  "name": "genericapi",
+  "name": "autorequest-api",
   "version": "1.0.0",
   "description": "Requisições em API's de forma genérica",
   "main": "index.js",
