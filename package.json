@@ -1,0 +1,22 @@
+{
+  "name": "whitespace-genericapi",
+  "version": "1.0.0",
+  "description": "Requisições em API's de forma genérica",
+  "main": "index.js",
+  "scripts": {
+    "test": "node teste.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juniioroliveira/generic-api.git"
+  },
+  "author": "whitespace",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juniioroliveira/generic-api/issues"
+  },
+  "homepage": "https://github.com/juniioroliveira/generic-api#readme",
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
