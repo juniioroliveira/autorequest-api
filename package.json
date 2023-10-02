@@ -1,6 +1,6 @@
 {
   "name": "autorequest-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Requisições em API's de forma genérica",
   "main": "index.js",
   "scripts": {
