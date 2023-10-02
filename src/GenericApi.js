@@ -128,7 +128,7 @@ async function GenericApi(apiName, apiRoute, data, headers, params, query) {
         if(response?.status === 401){
             
             if (route.auth) {
-                const { credential, tokenField } = UsersApi.get(apiName);
+                const { credential, tokenField } = Users.Get(apiName);
                 const tokenResponse = await genericAxios(apiName, 'POST', apiInfo.tokenUrl, credential);
                     
                 authCache[apiName] = tokenResponse[tokenField];
